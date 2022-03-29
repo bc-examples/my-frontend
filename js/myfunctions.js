@@ -49,3 +49,19 @@ function showPhone(phone){
 	//target_phone.value=phone;
     document.getElementById("target_phone").value=phone;
 }
+
+function login(){
+    let username=document.getElementById("username").value ;
+    let password=document.getElementById("password").value ;
+    document.getElementById("login_info").innerHTML="tunnus : "+username;
+    document.getElementById("username").value="";
+    document.getElementById("password").value="";
+    document.getElementById("login").hidden=true;
+    document.getElementById("logout").hidden=false;
+}
+
+function logout(){
+    document.getElementById("login").hidden=false;
+    document.getElementById("login_info").innerHTML="Kirjauduit ulos";
+    document.getElementById("logout").hidden=true;
+}

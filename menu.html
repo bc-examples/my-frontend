@@ -10,7 +10,15 @@
 </head>
 <body>
     <div id="header">
-        Header osa
+        <div id="login">
+            <label for="username">tunnus</label> <br>
+            <input type="text" name="" id="username" placeholder="tunnus"> <br>
+            <label for="password">salasana</label> <br>
+            <input type="text" name="" id="password" placeholder="salasana"> <br>
+            <button onclick="login()">Kirjaudu</button>
+        </div>
+        <span id="login_info"></span> 
+        <button id="logout" onclick="logout()" hidden="true">Kirjaudu ulos</button>
     </div>
     <div id="menu">
         <ul>
