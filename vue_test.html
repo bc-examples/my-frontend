@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <h1>Vue.js testi</h1>
+    <div id="eka">
+        <input v-model="fn" placeholder="etunimi"> <br>
+        <input v-model="ln" placeholder="sukunimi"> <br>
+        <button v-on:click="setValues">Tallenna</button> <br>
+        <p>{{fname}} {{lname}}</p>
+        <p>Terve {{fn}}</p>
+    </div>
+</body>
+<script>
+    var app1=new Vue({
+        el:"#eka",
+        data:{
+            fname:"Teppo",
+            lname:"Testi",
+            fn:""
+        },
+        methods:{
+            setValues:function(){
+                this.fname=this.fn
+                this.lname=this.ln
+            }
+        }
+    })
+</script>
+</html>
