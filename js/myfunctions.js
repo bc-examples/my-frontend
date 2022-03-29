@@ -20,3 +20,32 @@ function loadDoc(page) {
     xhttp.open("GET", "page1.html", true);
     xhttp.send();
   }
+
+  function saveData() {
+      //console.log("Buttonia klikattu");
+      let fname=document.getElementById("fn").value ;
+      let lname=document.getElementById("ln").value ;
+      console.log(fname+" "+lname);
+      document.getElementById("infoDiv").innerHTML="Terve "+fname+" "+lname;
+  }
+
+  function showData(){
+      let word=document.getElementById("wordTest").value ;
+      document.getElementById("infoSpan").innerHTML=word;
+  }
+
+  function showLanguage(){
+	let select=document.getElementById("source_language");
+	console.log(select);
+	let source_language=select.value;
+	console.log(source_language);
+	let target_language=document.getElementById("target_language");
+	target_language.value=source_language;
+}
+
+function showPhone(phone){
+	console.log(phone);
+	//let target_phone=document.getElementById("target_phone");
+	//target_phone.value=phone;
+    document.getElementById("target_phone").value=phone;
+}
